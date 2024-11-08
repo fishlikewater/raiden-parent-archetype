@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.1.0 http://maven.apache.org/xsd/archetype-catalog-1.1.0.xsd"
+        name="raiden"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+        <requiredProperty key="githubName">
+            <defaultValue>fishlikewater</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="author">
+            <defaultValue>fishlikewater</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="email">
+            <defaultValue>fishlikewater@126.com</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>.idea/inspectionProfiles</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>.idea</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory>.idea</directory>
+            <includes>
+                <include>**/*.gitignore</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>./</directory>
+            <includes>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory>./</directory>
+            <includes>
+                <include>.gitignore</include>
+                <include>HEADER</include>
+                <include>LICENSE</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+    <modules>
+        <module id="${rootArtifactId}-dependency" dir="__rootArtifactId__-dependency"
+                name="${rootArtifactId}-dependency"/>
+        <module id="${rootArtifactId}-bom" dir="__rootArtifactId__-bom" name="${rootArtifactId}-bom"/>
+        <module id="${rootArtifactId}-parent" dir="__rootArtifactId__-parent" name="${rootArtifactId}-parent">
+        </module>
+    </modules>
+</archetype-descriptor>
